@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <style>
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Updated background color */
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto; /* Adjusted margin for better centering */
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            background-color: #3498db;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+        }
+        h2, h3, p {
+            color: #333;
+        }
+        img {
+            width: 150px;
+            height: 100px;
+        }
+        details {
+            margin-bottom: 15px;
+        }
+        summary {
+            cursor: pointer;
+            outline: none;
+        }
+        summary:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Portfolio</h1>
+
+        <p>I'm Shail Antani, a computer science engineering student specializing in Software Engineering at SRM IST University.</p>
+
+        <img src="my-passport-photo.jpg" alt="Profile Photo">
+
+        <p>Since I can remember, any conversation on technological and computing breakthroughs that solve problems has always been inspiring. The idea of technology and computing creating solutions to real-life inspires me. For specific, Android Development / iOS development particularly excite me. This bent of mind reflects my interest in Computer Programming.</p>
+
+        <details>
+            <summary><h2>Github and LinkedIn</h2></summary>
+            <p>
+                <a href="https://github.com/shailantani">GitHub Profile</a><br>
+                <a href="https://www.linkedin.com/in/shail-antani-945041250/">LinkedIn Profile</a>
+            </p>
+        </details>
+
+        <details>
+            <summary><h2>Class Projects</h2></summary>
+            <ul>
+                <li>Project 1: Student Management System (C++) <a href="https://github.com/shailantani/Student_Management"> Link!</a></li>
+                <li>Project 2: HANGMAN Game (Python)  <a href="https://github.com/shailantani/Hangman_Game"> Link</a></li>
+                <li>Project 3: Memeflix, A flutter project I made for SRMKzilla (Flutter)<a href="https://github.com/shailantani/memeflix_kzilla"> Link</a></li>
+                <!-- You can add more projects here -->
+            </ul>
+        </details>
+
+        <details>
+            <summary><h2>Semester-wise GPA</h2></summary>
+            <p>Semester 1: 8.05</p>
+            <p>Semester 2: 8.65</p>
+            <p>CGPA: 8.32</p>
+        </details>
+
+        <details>
+            <summary><h2> Hackathons </h2></summary>
+            <p>Unstop Agoda Hackathon</p>
+            <img src="Agoda_hackathon.png" alt=" Agoda Certificate">
+
+
+            <p>SRM OODP Hackathon</p>
+            <img src="OODP_Hackathon.png" alt=" Agoda Certificate">
+
+            
+        </details>
+
+        <details>
+            <summary><h2>Achievements</h2></summary>
+            <h3> <a href="https://github.com/shailantani/Student_Management">Hackerrank</a></h3>
+            <ul>
+                <li>Golden Badged Problem Solving certification</li>
+                <li>Golden Badged C++ certification</li>
+                <li>Silver Badged Python certification</li>
+            </ul>
+            <h3>NPTEL</h3>
+            <ul>
+                <li>Programming with Java - IIT Kharagpur</li>
+                <li>Computer Architecture - IIT Delhi</li>
+            </ul>
+
+
+            
+
+
+        </details>
+
+        <!-- Repeat the pattern for other sections -->
+
+    </div>
+    <button onclick="downloadPdf()">Download PDF</button>
+
+    <script>
+        function downloadPdf() {
+            const element = document.querySelector('.container');
+
+            html2pdf(element);
+        }
+    </script>
+</body>
+</html>
